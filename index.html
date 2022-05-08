@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4ac261affb.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jogo da Velha</title>
+  </head>
+  <body>
+    <!-- Modal Cadastro Players -->
+    <div class="modal-players is-closed">
+      <form action="" class="player-form">
+        <span>Escolha os Nomes dos Jogadores</span>
+        <input
+          class="player-input"
+          type="text"
+          placeholder="Player 1"
+          id="player1"
+        />
+        <input
+          class="player-input"
+          type="text"
+          placeholder="Player 2"
+          id="player2"
+        />
+        <input class="btn-player-name" type="button" value="Alterar" />
+      </form>
+    </div>
+    <!-- Modal X Venceu -->
+    <div class="modal-players-win-x is-closed">
+      <div class="win-container">
+        <h1 class="x-win-x">X</h1>
+        <span
+          ><i class="fa-solid fa-trophy"> </i>Parabéns <span
+            class="current-winer-x"
+          ></span>
+          Venceu !!!</span
+        >
+      </button>
+      <button class="btn-reset">
+        <i class="fa-solid fa-gamepad"></i>Reiniciar Game
+      </button>
+      </div>
+    </div>
+    <!-- Modal O Venceu -->
+    <div class="modal-players-win-o is-closed">
+      <div class="win-container">
+        <h1 class="x-win-o">O</h1>
+        <span
+          ><i class="fa-solid fa-trophy"> </i>Parabéns <span
+            class="current-winer-o"
+          ></span>
+          Venceu !!!</span
+        >
+      </button>
+      <button class="btn-reset">
+        <i class="fa-solid fa-gamepad"></i>Reiniciar Game
+      </button>
+      </div>
+    </div>
+
+    <!-- Game -->
+    <main class="container">
+      <h1>Jogo da Velha</h1>
+      <div class="players">
+        <div class="row-p1">
+          <span class="player-01">Player 1</span>
+        </div>
+        <div class="row-p2">
+          <span class="player-02">Player 2</span>
+        </div>
+      </div>
+      <table class="board">
+        <tr>
+          <td><button class="fild" id="b1"></button></td>
+          <td><button class="fild" id="b2"></button></td>
+          <td><button class="fild" id="b3"></button></td>
+        </tr>
+        <tr>
+          <td><button class="fild" id="b4"></button></td>
+          <td><button class="fild" id="b5"></button></td>
+          <td><button class="fild" id="b6"></button></td>
+        </tr>
+        <tr>
+          <td><button class="fild" id="b7"></button></td>
+          <td><button class="fild" id="b8"></button></td>
+          <td><button class="fild" id="b9"></button></td>
+        </tr>
+      </table>
+      <div class="btn-cointainer">
+        <button class="btn-player">
+          <i class="fa-solid fa-user-large"></i>Editar Nomes
+        </button>
+        <button class="btn-reset">
+          <i class="fa-solid fa-gamepad"></i>Reiniciar Game
+        </button>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
